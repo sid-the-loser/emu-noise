@@ -15,25 +15,34 @@ class ValueNoise():
         return (v1+v2+v3)/3
 
     def noise2D(self, x, y):
+        v = []
         random.seed(f"{x}{y}{self.seed}")
-        v1 = random.random()*self.amplify
+        v.append(random.random()*self.amplify)
         random.seed(f"{x+1}{y}{self.seed}")
-        v2 = random.random()*self.amplify
+        v.append(random.random()*self.amplify)
         random.seed(f"{x}{y+1}{self.seed}")
-        v3 = random.random()*self.amplify
+        v.append(random.random()*self.amplify)
         random.seed(f"{x+1}{y+1}{self.seed}")
-        v4 = random.random()*self.amplify
+        v.append(random.random()*self.amplify)
         random.seed(f"{x-1}{y}{self.seed}")
-        v5 = random.random()*self.amplify
+        v.append(random.random()*self.amplify)
         random.seed(f"{x}{y-1}{self.seed}")
-        v6 = random.random()*self.amplify
+        v.append(random.random()*self.amplify)
         random.seed(f"{x-1}{y-1}{self.seed}")
-        v7 = random.random()*self.amplify
+        v.append(random.random()*self.amplify)
         random.seed(f"{x+1}{y-1}{self.seed}")
-        v8 = random.random()*self.amplify
+        v.append(random.random()*self.amplify)
         random.seed(f"{x-1}{y+1}{self.seed}")
-        v9 = random.random()*self.amplify
-        return (v1+v2+v3+v4+v5+v6+v7+v8+v9)/9
+        v.append(random.random()*self.amplify)
+        total = 0
+        for i in v:
+            total += v
+        return total/len(v)
 
     def noise3D(self, x, y, z):
-        pass
+        pass # Work in progress
+
+"""
+Coming up next...
+class PerlinNoise():
+"""
