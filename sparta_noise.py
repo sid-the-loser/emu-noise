@@ -36,7 +36,7 @@ class ValueNoise():
         v.append(random.random()*self.amplify)
         total = 0
         for i in v:
-            total += v
+            total += i
         return total/len(v)
 
     def noise3D(self, x, y, z):
@@ -97,7 +97,7 @@ class ValueNoise():
         v.append(random.random()*self.amplify)
         total = 0
         for i in v:
-            total += v
+            total += i
         return total/len(v)
 """
 Coming up next...
