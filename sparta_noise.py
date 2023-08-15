@@ -2,7 +2,7 @@ import random
 
 class ValueNoise():
     def __init__(self, seed=0, amplify=1):
-        self.seed = 0
+        self.seed = seed
         self.amplify = amplify
 
     def noise1D(self, x):
